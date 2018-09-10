@@ -4,6 +4,7 @@
 data/
 output/
 venv/
+.idea
 
 
 # Created by https://www.gitignore.io
