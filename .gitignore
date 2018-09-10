@@ -5,6 +5,7 @@ data/
 output/
 venv/
 .idea
+config.py
 
 
 # Created by https://www.gitignore.io

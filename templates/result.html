@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}結果{% endblock title %}
+{% block title %}tangent{% endblock title %}
 
 {% block content %}
+    <h1>tangent</h1>
     <div class="row">
-        {% for title, link in links %}
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="/?target={{ link }}">{{ title }}</a>
-            </div>
-        {% endfor %}
+        <div class="card-columns">
+            {% for created_at, screen_name, text in tweets %}
+                <div class="card bg-light mb-3" style="width: 100%;">
+                    <div class="card-header">
+                        <a href="https://twitter.com/{{ screen_name }}">@{{ screen_name }}</a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{ text }}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{ created_at }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock content %}
 
